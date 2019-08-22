@@ -16,7 +16,7 @@ are followed during the competition. They also handle incidents and are responsi
 If you ever have any doubts or questions, they should be your first choice for asking.
 
 ::::: {.important}
-IMPORTANT: If you are not sure about something, always ask the Delegate!
+If you are not sure about something, always ask the Delegate!
 :::::
 
 - **Organizer**: Organizers are responsible for organizing the competition and for ensuring that it runs smoothly
