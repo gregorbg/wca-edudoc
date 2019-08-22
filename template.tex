@@ -1,18 +1,22 @@
-\documentclass[8pt]{article}
+\documentclass[a4paper]{article}
+
 \usepackage[final]{pdfpages}
 \usepackage{fancyhdr}
+\usepackage{fontspec}
+\usepackage[margin=15mm,headsep=3mm,footskip=3mm]{geometry}
 
-\topmargin 70pt
-\oddsidemargin 70pt
+\setmainfont{Arial}
 
 \pagestyle{fancy}
-\rfoot{\Large\thepage}
-\cfoot{}
-\renewcommand {\headrulewidth}{0pt}
-\renewcommand {\footrulewidth}{0pt}
+\lhead{DOCUMENT\_TITLE}
+\chead{IMAGE}
+\rhead{\today}
+\cfoot{\thepage}
+
+% avoid drawing lines below header / above footer
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
 
 \begin{document}
-\includepdfset{pagecommand=\thispagestyle{fancy}}
-\includepdf[fitpaper=true,scale=0.98,pages=-]{PDF_INTERMEDIATE}
-% fitpaper & scale aren't always necessary - depends on the paper being submitted.
+\includepdf[pagecommand={\thispagestyle{fancy}},pages=-]{PDF_INTERMEDIATE}
 \end{document}
