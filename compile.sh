@@ -25,7 +25,7 @@ find "$1" -name '*.md' | while read file; do
   HTML_FILE="$BUILD_DIR/$FILE_BASENAME.html"
 
   pandoc -s --from markdown --to html5 --metadata pagetitle="$1" "$file" -o "$HTML_FILE" # Markdown -> HTML
-  wkhtmltopdf --encoding 'utf-8' -T 15mm -B 15mm -R 15mm -L 15mm --quiet "$HTML_FILE" "$PDF_INTERMEDIATE_FILE" # HTML -> PDF
+  wkhtmltopdf --encoding 'utf-8' --user-style-sheet "style.css" -T 15mm -B 15mm -R 15mm -L 15mm --quiet "$HTML_FILE" "$PDF_INTERMEDIATE_FILE" # HTML -> PDF
 
   TEX_SOURCE="$BUILD_DIR/$FILE_BASENAME.tex"
 
