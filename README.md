@@ -34,6 +34,9 @@ To compile a complete PDF, invoke `compile.sh` and pass the name of the folder t
 ./compile.sh competitor-tutorial/
 ```
 
+The output file can then be found at `$project/build/$file.pdf` where `$project` is the folder of your project and `$file`
+is the *exact* filename of your original `.md` file.
+
 ### Including assets
 
 If you want to include assets (images, external code snippets, etc.) then place them in a separate `assets` subfolder
