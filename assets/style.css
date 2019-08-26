@@ -4,6 +4,15 @@ body {
     font-family: arial;
 }
 
+h1 {
+    text-align: center;
+}
+
+img.logo {
+    float: left;
+    padding: 20px;
+}
+
 .important {
 	background: #f00;
 	border-style: solid;
