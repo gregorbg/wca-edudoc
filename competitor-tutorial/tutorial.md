@@ -1,7 +1,7 @@
 # WCA Competition Tutorial
 
 ## WCA Organization - General Introduction
-![WCA logo](https://www.worldcubeassociation.org/files/WCAlogo_notext.svg)
+![WCA logo](https://www.worldcubeassociation.org/files/WCAlogo_notext.svg){.logo height=133px}
 The World Cube Association is the organization responsible for organizing speedcubing competitions all around the world.
 Every competition that is sanctioned by the WCA has to follow the WCA Regulations and Guidelines,
 so it's very important that you are familiar with them before going to a competition.
