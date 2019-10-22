@@ -10,7 +10,6 @@ similar to the style of the official [WCA Competitor Tutorial](https://www.world
 - `git` (at https://git-scm.com/)
 - `pandoc` (at https://pandoc.org/)
 - `wkhtmltopdf` (at https://wkhtmltopdf.org/)
-- `lualatex` (at http://www.luatex.org/, also included in prominent LaTeX distributions like [TeXLive](https://www.tug.org/texlive/))
 
 Most (if not all) of these packages should also be available pre-build through the package manager of your distribution
 (`apt`, `pacman`, `yay`, `homebrew` et al.)
@@ -95,18 +94,10 @@ This text will appear below the red box.
 
 The compiler works as follows: (read left to right)
 
-| | source file | pandoc | wkhtmltopdf | lualatex |
-| --- | ----------- | ------ | ----------- | ---------|
-| format| md | html | pdf | pdf |
-| purpose | simple text | apply CSS | convert to universal single-file document format | add header / footer
-
-### Why the heck use LaTeX?
-
-TeX is a very complex layout engine. The only reason that we include it here is because we need recurring headers
-(that include a seal and version of the document) and footers (page numbers).
-
-Neither `pandoc` nor `wkhtmltopdf` support this feature (to my knowledge). The TeX template is arguably simple
-(see `assets/template.tex`) so compilation should not take that long.
+| | source file | pandoc | wkhtmltopdf |
+| --- | ----------- | ------ | ----------- |
+| format | md | html | pdf |
+| purpose | simple text | apply CSS and add header / footer | convert to universal single-file document format |
 
 ## Contributing
 
