@@ -37,8 +37,8 @@ find "$PROJECT_DIR" -name '*.md' | while read file; do
 
   CURRENT_HEADER="$ASSETS_ABS_DIR/tmp_header.html"
   cp $HEADER_HTML_FILE $CURRENT_HEADER
-  sed -iE "s#$HEADER_TITLE_PLACEHOLDER#$DOCUMENT_TITLE#g" "$CURRENT_HEADER"
-  sed -iE "s#$HEADER_VERSION_PLACEHOLDER#$DATE#g" "$CURRENT_HEADER"
+  sed -i -E "s#$HEADER_TITLE_PLACEHOLDER#$DOCUMENT_TITLE#g" "$CURRENT_HEADER"
+  sed -i -E "s#$HEADER_VERSION_PLACEHOLDER#$DATE#g" "$CURRENT_HEADER"
 
   pandoc -s --from markdown --to html5 --metadata pagetitle="$PROJECT_DIR" "$file" -o "$HTML_FILE" # Markdown -> HTML
   wkhtmltopdf --encoding 'utf-8' --user-style-sheet "$CSS_STYLESHEET" -T 15mm -B 15mm -R 15mm -L 15mm --header-html "$CURRENT_HEADER" --footer-center "[page]" --quiet "$HTML_FILE" "$PDF_FILE" # HTML -> PDF
